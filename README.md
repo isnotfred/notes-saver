@@ -49,17 +49,13 @@ Before running the app, make sure you have:
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/isnotfred/notes-saver.git
 cd notes-saver
 ```
 
 ### 2. Create the `.env` file
 
-Copy the example file and fill in your credentials:
-
-```powershell
-cp .env.example .env
-```
+Create the `.env` file and fill in your credentials.
 
 Your `.env` should look like this:
 
