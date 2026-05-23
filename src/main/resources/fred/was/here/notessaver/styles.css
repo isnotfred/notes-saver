@@ -1,0 +1,324 @@
+/* ═══════════════════════════════════════════════
+   NotesVault — styles.css
+   Dark-ish, clean, modern palette
+   ═══════════════════════════════════════════════ */
+
+/* ── Root / base ─────────────────────────────── */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #1e1e2e;
+    -color-bg:       #1e1e2e;
+    -color-surface:  #2a2a3e;
+    -color-card:     #313147;
+    -color-primary:  #7c6af7;
+    -color-primary-h:#6a59e0;
+    -color-accent:   #f5a623;
+    -color-text:     #e0dff8;
+    -color-muted:    #9290b0;
+    -color-border:   #3e3e58;
+    -color-error:    #f87171;
+    -color-success:  #4ade80;
+}
+
+/* ── Auth screens ─────────────────────────────── */
+.auth-root {
+    -fx-background-color: -color-bg;
+    -fx-padding: 40;
+}
+.auth-card {
+    -fx-background-color: -color-card;
+    -fx-background-radius: 16;
+    -fx-padding: 36 40 36 40;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 24, 0, 0, 8);
+}
+.app-icon {
+    -fx-text-fill: -color-text;
+    -fx-font-size: 48px;
+    -fx-effect: dropshadow(gaussian, rgba(124, 106, 247, 0.6), 12, 0, 0, 0);
+}
+.app-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(124, 106, 247, 0.4), 8, 0, 0, 0);
+}
+.auth-subtitle {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 13px;
+}
+.field-label {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+.text-input {
+    -fx-background-color: -color-surface;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-text-fill: -color-text;
+    -fx-prompt-text-fill: -color-muted;
+    -fx-padding: 10 12 10 12;
+}
+.text-input:focused {
+    -fx-border-color: -color-primary;
+}
+.error-label {
+    -fx-text-fill: -color-error;
+    -fx-font-size: 12px;
+    -fx-min-height: 16;
+}
+.auth-link-text {
+    -fx-text-fill: -color-muted;
+}
+
+/* ── Buttons ──────────────────────────────────── */
+.btn-primary {
+    -fx-background-color: -color-primary;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+.btn-primary:hover {
+    -fx-background-color: -color-primary-h;
+}
+.btn-primary:disabled {
+    -fx-opacity: 0.6;
+}
+.btn-secondary {
+    -fx-background-color: transparent;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-text-fill: -color-text;
+    -fx-padding: 8 18 8 18;
+    -fx-cursor: hand;
+}
+.btn-secondary:hover {
+    -fx-background-color: -color-surface;
+}
+.btn-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: -color-primary;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+.btn-link:hover {
+    -fx-underline: true;
+}
+.icon-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -color-muted;
+    -fx-padding: 4 8 4 8;
+    -fx-cursor: hand;
+    -fx-background-radius: 6;
+}
+.icon-btn:hover {
+    -fx-background-color: -color-surface;
+    -fx-text-fill: -color-text;
+}
+
+/* ── Dashboard ────────────────────────────────── */
+.dashboard-root {
+    -fx-background-color: -color-bg;
+}
+.topbar {
+    -fx-background-color: -color-card;
+    -fx-padding: 12 20 12 20;
+    -fx-border-color: transparent transparent -color-border transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.topbar-icon {
+    -fx-font-size: 22px;
+    -fx-text-fill: -color-text;
+}
+.topbar-title {
+    -fx-text-fill: -color-text;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+.greeting-label {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 13px;
+}
+.sidebar {
+    -fx-background-color: -color-surface;
+    -fx-border-color: transparent -color-border transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+.status-label {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 11px;
+}
+.notes-panel {
+    -fx-background-color: -color-bg;
+    -fx-padding: 0;
+}
+.note-list {
+    -fx-background-color: -color-bg;
+    -fx-border-color: transparent;
+}
+.note-list .list-cell {
+    -fx-background-color: -color-bg;
+    -fx-padding: 12 16 12 16;
+    -fx-border-color: transparent transparent -color-border transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.note-list .list-cell:hover {
+    -fx-background-color: -color-surface;
+    -fx-cursor: hand;
+}
+.note-list .list-cell:selected {
+    -fx-background-color: derive(-color-primary, -50%);
+}
+.note-title {
+    -fx-text-fill: -color-text;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.note-preview {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 12px;
+}
+.note-meta {
+    -fx-text-fill: derive(-color-muted, -20%);
+    -fx-font-size: 11px;
+}
+.pinned-note {
+    -fx-background-color: rgba(124, 106, 247, 0.15);
+    -fx-border-color: -color-primary transparent transparent transparent;
+    -fx-border-width: 2 0 0 0;
+}
+
+/* ── Note Editor ──────────────────────────────── */
+.editor-root {
+    -fx-background-color: -color-bg;
+}
+.editor-topbar {
+    -fx-background-color: -color-card;
+    -fx-padding: 12 20 12 20;
+    -fx-border-color: transparent transparent -color-border transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.editor-body {
+    -fx-background-color: -color-bg;
+    -fx-padding: 20 24 10 24;
+}
+.editor-title-input {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent -color-border transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-text-fill: -color-text;
+    -fx-prompt-text-fill: -color-muted;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 0 8 0;
+}
+.editor-title-input:focused {
+    -fx-border-color: transparent transparent -color-primary transparent;
+}
+.editor-content {
+    -fx-background-color: -color-surface;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-text-fill: -color-text;
+    -fx-prompt-text-fill: -color-muted;
+    -fx-padding: 12;
+    -fx-font-size: 14px;
+    -fx-pref-row-count: 18;
+    -fx-control-inner-background: -color-surface;
+    -fx-highlight-fill: -color-primary;
+    -fx-highlight-text-fill: white;
+}
+.editor-content .content {
+    -fx-background-color: -color-surface;
+}
+.editor-content:focused {
+    -fx-border-color: -color-primary;
+}
+.combo-input {
+    -fx-background-color: -color-surface;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-text-fill: -color-text;
+    -fx-prompt-text-fill: -color-text;
+}
+.combo-box .list-cell {
+    -fx-text-fill: -color-text;
+    -fx-background-color: -color-surface;
+}
+.combo-box-button {
+    -fx-background-color: -color-surface;
+}
+.combo-box .arrow {
+    -fx-background-color: -color-text;
+}
+.pin-check {
+    -fx-text-fill: -color-muted;
+}
+.char-count {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 11px;
+}
+.editor-footer {
+    -fx-background-color: -color-card;
+    -fx-padding: 14 20 14 20;
+    -fx-border-color: -color-border transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* ── Scrollbars ───────────────────────────────── */
+.scroll-bar {
+    -fx-background-color: -color-bg;
+}
+.scroll-bar .thumb {
+    -fx-background-color: -color-border;
+    -fx-background-radius: 4;
+}
+.scroll-bar .thumb:hover {
+    -fx-background-color: -color-muted;
+}
+.scroll-bar .track, .scroll-bar .track-background {
+    -fx-background-color: transparent;
+}
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* ── ComboBox popup ───────────────────────────── */
+.combo-box-popup .list-view {
+    -fx-background-color: -color-card;
+    -fx-border-color: -color-border;
+}
+.combo-box-popup .list-cell {
+    -fx-background-color: -color-card;
+    -fx-text-fill: -color-text;
+    -fx-padding: 6 12 6 12;
+}
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: -color-surface;
+}
+
+/* ── Separator ────────────────────────────────── */
+.separator .line {
+    -fx-border-color: -color-border;
+}
+
+/* ── Alert dialogs ────────────────────────────── */
+.dialog-pane {
+    -fx-background-color: -color-card;
+}
+.dialog-pane .content.label {
+    -fx-text-fill: -color-text;
+}
+.dialog-pane .header-panel .label {
+    -fx-text-fill: -color-text;
+}

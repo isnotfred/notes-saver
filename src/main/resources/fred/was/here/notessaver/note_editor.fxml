@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fred.was.here.notessaver.controller.NoteEditorController"
+            styleClass="editor-root"
+            prefWidth="780" prefHeight="560">
+
+    <!-- HEADER -->
+    <top>
+        <HBox styleClass="editor-topbar" alignment="CENTER_LEFT" spacing="12">
+            <Label text="📓 NotesVault" styleClass="topbar-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="errorLabel" styleClass="error-label"/>
+        </HBox>
+    </top>
+
+    <!-- EDITOR BODY -->
+    <center>
+        <VBox styleClass="editor-body" spacing="14">
+            <padding><Insets top="20" right="24" bottom="10" left="24"/></padding>
+
+            <TextField fx:id="titleField" promptText="Note title…" styleClass="editor-title-input"/>
+
+            <HBox spacing="16" alignment="CENTER_LEFT">
+                <Label text="Category:" styleClass="field-label"/>
+                <ComboBox fx:id="categoryCombo" styleClass="combo-input"/>
+                <CheckBox fx:id="pinnedCheck" text="📌 Pin this note" styleClass="pin-check"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="charCountLabel" text="0 chars" styleClass="char-count"/>
+            </HBox>
+
+            <TextArea fx:id="contentArea"
+                      promptText="Write your note here…"
+                      styleClass="editor-content"
+                      wrapText="true"
+                      VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </center>
+
+    <!-- FOOTER -->
+    <bottom>
+        <HBox styleClass="editor-footer" alignment="CENTER_RIGHT" spacing="12">
+            <Button text="Cancel" onAction="#handleCancel" styleClass="btn-secondary"/>
+            <Button fx:id="saveBtn" text="Save Note" onAction="#handleSave" styleClass="btn-primary"/>
+        </HBox>
+    </bottom>
+</BorderPane>
